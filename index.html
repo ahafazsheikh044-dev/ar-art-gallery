@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AR ART GALLERY</title>
+
+<!-- QR Code Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background:
+        radial-gradient(circle at top left, #ff4b91 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #6c35ff 0%, transparent 35%),
+        #111111;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 430px;
+    background: rgba(255,255,255,0.97);
+    border-radius: 30px;
+    padding: 30px 24px;
+    text-align: center;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+}
+
+/* LOGO */
+.logo {
+    width: 105px;
+    height: 105px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #111111, #ff3f91);
+
+    color: white;
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: -3px;
+
+    border: 5px solid white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+h1 {
+    font-size: 28px;
+    color: #111;
+    margin-bottom: 7px;
+}
+
+.tagline {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+/* QR */
+.qr-box {
+    background: white;
+    width: 245px;
+    height: 245px;
+    margin: 0 auto 22px;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#qrcode img {
+    width: 215px;
+    height: 215px;
+}
+
+/* BUTTONS */
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding: 15px;
+    margin: 11px 0;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.instagram {
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.call {
+    background: #111111;
+}
+
+.upi {
+    background: linear-gradient(135deg, #5f35d5, #8b5cf6);
+}
+
+/* CONTACT INFO */
+.contact-info {
+    margin-top: 23px;
+    padding-top: 18px;
+    border-top: 1px solid #eeeeee;
+
+    text-align: left;
+}
+
+.contact-info p {
+    font-size: 14px;
+    color: #555;
+    margin: 9px 0;
+}
+
+.contact-info strong {
+    color: #111;
+}
+
+.footer {
+    margin-top: 20px;
+    color: #999;
+    font-size: 11px;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .profile-card {
+        padding: 25px 18px;
+        border-radius: 25px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .qr-box {
+        width: 225px;
+        height: 225px;
+    }
+
+    #qrcode img {
+        width: 195px;
+        height: 195px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="profile-card">
+
+    <!-- LOGO -->
+    <div class="logo">
+        AR
+    </div>
+
+    <!-- BUSINESS NAME -->
+    <h1>AR ART GALLERY</h1>
+
+    <p class="tagline">
+        Printing • Designing • Gifting
+    </p>
+
+    <!-- QR CODE -->
+    <div class="qr-box">
+        <div id="qrcode"></div>
+    </div>
+
+    <!-- INSTAGRAM -->
+    <a
+        class="button instagram"
+        href="https://www.instagram.com/ar.art.gallery?stkn=dWtleGV4OGg0aXEw"
+        target="_blank">
+        📷 Instagram
+    </a>
+
+    <!-- WHATSAPP -->
+    <a
+        class="button whatsapp"
+        href="https://wa.me/918928974446"
+        target="_blank">
+        💬 WhatsApp
+    </a>
+
+    <!-- CALL -->
+    <a
+        class="button call"
+        href="tel:8928974446">
+        📞 Call Now
+    </a>
+
+    <!-- UPI -->
+    <a
+        class="button upi"
+        href="upi://pay?pa=8928974446@kotakbank&pn=AR%20ART%20GALLERY">
+        💳 Pay via UPI
+    </a>
+
+    <!-- CONTACT DETAILS -->
+    <div class="contact-info">
+
+        <p>
+            <strong>WhatsApp:</strong>
+            8928974446 / 8983797446
+        </p>
+
+        <p>
+            <strong>Call:</strong>
+            8928974446 / 8983797446
+        </p>
+
+        <p>
+            <strong>UPI ID:</strong>
+            8928974446@kotakbank
+        </p>
+
+    </div>
+
+    <div class="footer">
+        © AR ART GALLERY
+    </div>
+
+</div>
+
+
+<script>
+
+/*
+==================================================
+QR CODE DATA
+==================================================
+
+QR scan karne par ye information milegi.
+Location intentionally include nahi ki gayi hai.
+*/
+
+var qrData =
+"AR ART GALLERY\n\n" +
+
+"Instagram:\n" +
+"https://www.instagram.com/ar.art.gallery?stkn=dWtleGV4OGg0aXEw\n\n" +
+
+"WhatsApp:\n" +
+"8928974446 / 8983797446\n\n" +
+
+"Call:\n" +
+"8928974446 / 8983797446\n\n" +
+
+"UPI ID:\n" +
+"8928974446@kotakbank";
+
+
+/*
+==================================================
+GENERATE QR
+==================================================
+*/
+
+new QRCode(document.getElementById("qrcode"), {
+
+    text: qrData,
+
+    width: 215,
+    height: 215,
+
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+
+    correctLevel: QRCode.CorrectLevel.H
+
+});
+
+</script>
+
+</body>
+</html>
